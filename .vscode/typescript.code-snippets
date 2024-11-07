@@ -1,0 +1,75 @@
+{
+  // Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // same ids are connected.
+  // Example:
+  "単一のclass名でhtmlを変化したい時": {
+    "prefix": "element_class",
+    "body": [
+      "const ${1:変数名} = document.querySelector('.${2:class名}') as HTMLElement;"
+    ]
+  },
+  "undefinedのチェックをしたい時": {
+    "prefix": "if_undefined",
+    "body": [
+      "if (typeof ${1:確認変数} !== 'undefined') {",
+      "${2:処理}",
+      "}"
+    ]
+  },
+  "説明文つきfuncton宣言": {
+    "prefix": "function",
+    "body": [
+      "\/**",
+      "* ${4:関数の説明}",
+      "* @param {${5:引数の型}} ${6:引数の名} - ${7:引数の説明}",
+      "* @return {${8:返り値、縦棒使って曖昧にできる(any|null)}} - ${9:返り値の説明}",
+      "*\/",
+      "function ${1:functionName}(${2:params}:${3:type}) {",
+      "${3:console.log('処理内容を記載')}",
+      "}"
+    ]
+  },
+  "class名を持ってるか(true, false)": {
+    "prefix": "class contains",
+    "body": [
+      "element.classList.contains('${1:class名}')"
+    ]
+  },
+  "class付与": {
+    "prefix": "class add",
+    "body": [
+      "element.classList.add('${1:class名}')"
+    ]
+  },
+  "object型の数を確認したい時": {
+    "prefix": "object length",
+    "body": [
+      "Object.keys(${1:elementSections}).length"
+    ]
+  },
+  "特定のelementを配列としてforeach": {
+    "prefix": [
+      "Array_from",
+      "foreach_array"
+    ],
+    "body": [
+      "Array.from(${1:element})",
+      ".forEach(function (${2:element}: ${3:HTMLElement}) {",
+      "${4:console.log('ここに処理を書く')}",
+      "});"
+    ]
+  },
+  "js版ブレイクポイント": {
+    "prefix": [
+      "if_screen",
+      "js screen"
+    ],
+    "body": [
+      "// 画面幅が767px以下の場合",
+      "if (window.innerWidth <= 767) {",
+      "}"
+    ]
+  },
+}

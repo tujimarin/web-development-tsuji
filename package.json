@@ -1,0 +1,45 @@
+{
+  "dependencies": {
+    "@shopify/cli": "^3.22.1",
+    "autoprefixer": "^10.4.13",
+    "css-mqpacker": "^7.0.0",
+    "glob-watcher": "^6.0.0",
+    "gulp-sass": "^5.1.0",
+    "minimist": "^1.2.8",
+    "postcss": "^8.4.18",
+    "sass": "^1.55.0",
+    "swiper": "^11.1.4"
+  },
+  "name": "dev",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "html:lint": "markuplint **/*.html",
+    "lint": "standard && node ../Form/BrxCurriculum/2024/Y_Tsuji/lesson01/assets/js/script-brandex.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "del": "^6.1.1",
+    "eslint": "^9.4.0",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-convert-encoding": "^3.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-webp": "^4.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-webp": "^5.1.0",
+    "markuplint": "^4.9.0",
+    "prettier": "^3.3.1",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "img_picture": {
+    "prefix": "img picture",
+    "body": [
+      "<picture>",
+      "<source srcset=\"$1\" media=\"(max-width: 768px)\">",
+      "<img src=\"$2\" alt=\"$2\">",
+      "</picture>"
+    ],
+    "description": "異なる画像を出し分けるタグ"
+  },
+  "ターゲットブランク": {
+    "prefix": "target_b",
+    "body": [
+      "target=\"_blank\" rel=\"noopener\""
+    ]
+  },
+  "video用のタグ": {
+    "prefix": "video_tag",
+    "body": [
+      "<video>",
+      "<source muted src=\"${1:url}\" type=\"video/mp4\">",
+      "<p>ご使用のブラウザでは動画再生に対応していません</p>",
+      "</video>"
+    ]
+  },
+  "ダミー画像": {
+    "prefix": "dummy_img",
+    "body": [
+      "https://placehold.jp/30x30.png",
+    ]
+  },
+  "swiperのテンプレhtml": {
+    "prefix": "swiper",
+    "body": [
+      "<!-- Slider main container -->",
+      "<div class=\"swiper\">",
+      "<!-- Additional required wrapper -->",
+      "<div class=\"swiper-wrapper\">",
+      "<!-- Slides -->",
+      "<div class=\"swiper-slide\">Slide 1</div>",
+      "<div class=\"swiper-slide\">Slide 2</div>",
+      "<div class=\"swiper-slide\">Slide 3</div>",
+      "</div>",
+      "<!-- If we need pagination -->",
+      "<div class=\"swiper-pagination\"></div>",
+      "<!-- If we need navigation buttons -->",
+      "<div class=\"swiper-button-prev\"></div>",
+      "<div class=\"swiper-button-next\"></div>",
+      "<!-- If we need scrollbar -->",
+      "<div class=\"swiper-scrollbar\"></div>",
+      "</div>"
+    ]
+  },
+  "js-fadeIn": {
+    "prefix": "js-fadeIn",
+    "body": [
+      "js-fadeIn",
+    ]
+  },
+  "js-clipPathOnRight": {
+    "prefix": "js-clipPathOnRight",
+    "body": [
+      "js-clipPathOnRight",
+    ]
+  },
+  "is-valid-product": {
+    "prefix": "is-valid-product",
+    "body": [
+      "<?php /*",
+      "<% if (BaseMasterPage.IsValidProduct(\"$1\")) { %>",
+      "*/?>",
+      "<?php /*",
+      "<% }else{ %>",
+      "<% } %>",
+      "*/?>"
+    ]
+  }
+}
