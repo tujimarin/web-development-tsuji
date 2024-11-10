@@ -126,8 +126,8 @@ exports.task = css_cp;
 
 function img_cp() {
   del([paths.image.dest_dev + '**'])
-  del([paths.image.dest_stg + '**'])
-  del([paths.image.dest_master + '**'])
+  // del([paths.image.dest_stg + '**'])
+  // del([paths.image.dest_master + '**'])
 
   return gulp.src(asset_path + '*.{png,jpg,jpeg,gif,PNG,JPG,TPEG,GIF,svg}', { encoding: false })
     .pipe(imagemin([
@@ -141,8 +141,8 @@ function img_cp() {
       imagemin.gifsicle()
     ]))
     .pipe(gulp.dest(paths.image.dest_dev))
-    .pipe(gulp.dest(paths.image.dest_stg))
-    .pipe(gulp.dest(paths.image.dest_master))
+    // .pipe(gulp.dest(paths.image.dest_stg))
+    // .pipe(gulp.dest(paths.image.dest_master))
 }
 exports.task = img_cp;
 gulp.task('img_cp', gulp.series(img_cp));
