@@ -1,0 +1,107 @@
+@use "../common/settings";
+
+$d-width: 750;
+$dc-width: 660;
+
+
+
+
+@mixin mainAnimation {
+  .landing_content {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translate3d(-15%, 0, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translate3d(15%, 0, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    @keyframes fadeInBottom {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 15%, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .js-fadeIn,
+    .js-fadeInLeft,
+    .js-fadeInRight,
+    .js-fadeInBottom {
+      opacity: 0;
+      animation-delay: 0.3s;
+      animation-duration: 3s;
+      animation-fill-mode: both;
+    }
+
+    .js-fadeInGroupFirst {
+      opacity: 0;
+      animation-delay: 0.3s;
+      animation-duration: 3s;
+      animation-fill-mode: both;
+    }
+
+    .js-fadeInGroup {
+      opacity: 0;
+      animation-delay: 0.3s;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    .js-fadeIn,
+    .js-fadeInGroup,
+    .js-fadeInGroupFirst {
+      &--active {
+        animation-name: fadeIn;
+      }
+    }
+
+    .js-fadeInLeft {
+      &--active {
+        animation-name: fadeInLeft;
+      }
+    }
+
+    .js-fadeInRight {
+      &--active {
+        animation-name: fadeInRight;
+      }
+    }
+
+    .js-fadeInBottom {
+      &--active {
+        animation-name: fadeInBottom;
+      }
+    }
+  }
+}

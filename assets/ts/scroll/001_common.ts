@@ -52,7 +52,7 @@ function mediaControl(mediaElement: HTMLMediaElement | undefined, targetClassNam
       const media: HTMLMediaElement = mediaElement as HTMLMediaElement;
       media.loop = true;
       media.autoplay = true;
-      media.controls = false;
+      // media.controls = false;
       media.muted = true;
       media.play();
     }

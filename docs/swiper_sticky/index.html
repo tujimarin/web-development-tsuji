@@ -1,0 +1,221 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>swiperとstickyを利用したページ</title>
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+
+</head>
+
+<body>
+  <div id="landing_content" class="landing_content">
+
+    <section class="landing_content__main_visual">
+      <div class="main_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./img/mainvisual_1_s.jpg" media="(max-width: 768px)">
+              <img src="./img/mainvisual_1_l.jpg" alt="" width="" height="">
+            </picture>
+
+            <div class="css-main_detail">
+              <p class="css-main_detail--category">思い出の写真</p>
+              <h2 class="css-main_detail--title">今年の思い出の写真<h2>
+              <p class="css-main_detail--text">
+                実務で実際に利用したものを改修したページです。
+                使わない要素もありますが、似たような要望があったときのために、
+                大枠のsectionで分けています。
+              </p>
+
+              <a class="css-button css-main_detail--button" href="">
+                <p>ダミーボタン</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./img/mainvisual_2_s.jpg" media="(max-width: 768px)">
+              <img src="./img/mainvisual_2_l.jpg" alt="" width="" height="">
+            </picture>
+            <div class="css-main_detail">
+              <p class="css-main_detail--category">思い出の写真</p>
+              <h2 class="css-main_detail--title">今年の思い出の写真<h2>
+              <p class="css-main_detail--text">
+                実務で実際に利用したものを改修したページです。
+                使わない要素もありますが、似たような要望があったときのために、
+                大枠のsectionで分けています。
+              </p>
+
+              <a class="css-button css-main_detail--button" href="">
+                <p>ダミーボタン</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source srcset="./img/mainvisual_3_s.jpg" media="(max-width: 768px)">
+              <img src="./img/mainvisual_3_l.jpg" alt="" width="" height="">
+            </picture>
+            <div class="css-main_detail">
+              <p class="css-main_detail--category">思い出の写真</p>
+              <h2 class="css-main_detail--title">今年の思い出の写真<h2>
+              <p class="css-main_detail--text">
+                実務で実際に利用したものを改修したページです。
+                使わない要素もありますが、似たような要望があったときのために、
+                大枠のsectionで分けています。
+              </p>
+
+              <a class="css-button css-main_detail--button" href="">
+                <p>ダミーボタン</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="css-section css-section1">
+      <h2 class="css-headline">
+        <p class="css-headline--number js-fadeIn">01</p>
+        <p class="css-headline--title js-fadeIn css-delay1">見出し1のテキスト</p>
+      </h2>
+      <div class="css-wrapper">
+
+        <div class="css-image css-image1">
+          <a href="">
+            <div class="js-zoom">
+              <picture>
+                <source srcset="./img/item1.jpg" media="(max-width: 768px)">
+                <img src="./img/item1.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="css-image css-image2">
+          <a href="">
+            <div class="js-fadeIn">
+              <picture>
+                <source srcset="./img/item2.jpg" media="(max-width: 768px)">
+                <img src="./img/item2.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="css-image css-image3">
+          <a href="">
+            <div class="js-fadeIn">
+              <picture>
+                <source srcset="./img/item3.jpg" media="(max-width: 768px)">
+                <img src="./img/item3.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+    </section>
+
+    <section class="css-section css-section2">
+      <h2 class="css-headline">
+        <p class="css-headline--number js-fadeIn">02</p>
+        <p class="css-headline--title js-fadeIn css-delay1">見出し2のテキスト</p>
+      </h2>
+      <div class="css-wrapper">
+
+        <div class="css-image css-image1">
+          <a href="">
+            <div class="js-fadeInBottom">
+              <picture>
+                <source srcset="./img/item4.jpg" media="(max-width: 768px)">
+                <img src="./img/item4.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="css-image css-image2">
+          <a href="">
+            <div class="js-fadeIn">
+              <picture>
+                <source srcset="./img/item5.jpg" media="(max-width: 768px)">
+                <img src="./img/item5.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="css-image css-image3">
+          <a href="">
+            <div class="js-clip">
+              <picture>
+                <source srcset="./img/item6.jpg" media="(max-width: 768px)">
+                <img src="./img/item6.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="css-section css-section3">
+      <h2 class="css-headline">
+        <p class="css-headline--number js-fadeIn">03</p>
+        <p class="css-headline--title js-fadeIn css-delay1">見出し3のテキスト</p>
+      </h2>
+      <div class="css-wrapper">
+
+        <div class="css-image css-image1">
+          <a href="">
+            <div class="js-zoom">
+              <picture>
+                <source srcset="./img/item7.jpg" media="(max-width: 768px)">
+                <img src="./img/item7.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="css-image css-image2">
+          <a href="">
+            <div class="js-fadeInLeft">
+              <picture>
+                <source srcset="./img/item8.jpg" media="(max-width: 768px)">
+                <img src="./img/item8.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="css-image css-image3">
+          <a href="">
+            <div class="js-fadeInRightBottom">
+              <picture>
+                <source srcset="./img/item9.jpg" media="(max-width: 768px)">
+                <img src="./img/item9.jpg" alt="" loading="lazy">
+              </picture>
+            </div>
+          </a>
+        </div>
+    </section>
+
+
+    <div class="css-credit_all">
+      <a class="css-credit_all_link" href="../">
+        <p class="css-credit_all_link--text">一覧に戻る</p>
+        <div class="css-credit_all_link--border"></div>
+      </a>
+    </div>
+
+  </div>
+</body>
+
+</html>

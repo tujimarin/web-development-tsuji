@@ -48,7 +48,7 @@ function mediaControl(mediaElement, targetClassName) {
             const media = mediaElement;
             media.loop = true;
             media.autoplay = true;
-            media.controls = false;
+            // media.controls = false;
             media.muted = true;
             media.play();
         }

@@ -23,7 +23,7 @@ const minimist = require('minimist');
 
 const jsFilename = 'index';
 const origin_path = "./assets/";
-const work_pash = "docs/";
+const work_pash = "docs/swiper_sticky/";
 const asset_path = './assets/images/';
 const develop_path = './' + work_pash;
 const staging_path = './' + work_pash;

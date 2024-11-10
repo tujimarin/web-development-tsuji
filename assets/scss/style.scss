@@ -2,37 +2,38 @@
 
 @use "./common/l" as landing-page_l;
 @use "./common/s" as landing-page_s;
+@use "./common/reset" as reset;
 
-.landing_content {
-  // @include settings.family-main;
-  // overflow-x: hidden;
-  // contain: paint;
 
-  --color1: #333333;
-  --color2: #fff;
-  --color3: #FAEDCE;
+// @font-face {
+//   font-family: '小塚ゴシック Pr6N';
+//   src: url("/fonts/KozGoPr6N-Regular.otf") format("opentype");
+// }
+
+html,
+body {
+  font-size: 62.5%;
 }
 
-.js-scroll_lock {
-  overflow: hidden;
+body {
+  margin: 0;
 }
 
-@media (max-width: 1400px) and (min-width: 768px) {
-  html {
-    font-size: calc(10*(#{100vw} / #{1280}));
-  }
+#landing_content {
+  overflow: visible;
+  contain: paint;
+
+  // --color1: #000;
+  // --color2: #fff;
 }
+
+
+@include reset.reset;
 
 @media screen and (min-width: 768px) {
-  .s-view {
-    display: none !important;
-  }
   @include landing-page_l.landing-page;
 }
 
 @media screen and (max-width: 767px) {
-  .l-view {
-    display: none !important;
-  }
   @include landing-page_s.landing-page;
 }

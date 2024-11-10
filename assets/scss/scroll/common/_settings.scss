@@ -4,28 +4,24 @@ $master-width: width-value + px;
 $content-width-value: 100;
 $content-width: $content-width-value + #{"%"};
 
+$family: "Poppins", sans-serif;
 
 // font: 和文
 @mixin family-main {
+  font-family: 游ゴシック体, 游ゴシック Medium, Yu Gothic Medium, Yu Gothic, YuGothic, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+}
+
+@mixin family-TimesNewRoman {
   font-family: "Times New Roman", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 
-@mixin family-kozuka-gothic-pr6n {
-  font-family: "小塚ゴシック Pr6N", sans-serif;
+@mixin family-angie-sans {
+  font-family: "angie-sans", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
-
-
-@mixin family-apparat-light {
-  font-family: "apparat-light", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
 
 @mixin font-feature-settings_type1 {
   // イラレの文字間カーニング:0
@@ -139,7 +135,7 @@ $spd-width: 750; // SPデザインデータの横幅の数値を入れる
 
 @function get_rate($size, $viewport: $width-value) {
   $rate: math.div($size, $viewport);
-  @return #{$rate * 100}#{"%"};
+  @return calc((#{$size} / #{$viewport}) * 100%);
 }
 
 @function get_px($size) {

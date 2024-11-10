@@ -1,107 +1,125 @@
 @use "../common/settings";
 
 $d-width: 750;
-$dc-width: 660;
-
-
-
 
 @mixin mainAnimation {
-  .landing_content {
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
+  .js-fadeIn {
+    opacity: 0;
 
-      100% {
-        opacity: 1;
-      }
+    transition: ease-in, opacity 1s;
+
+    &.css-delay1 {
+      transition-delay: 0.5s;
     }
 
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translate3d(-15%, 0, 0);
-      }
 
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  .js-fadeInLeft {
+    opacity: 0;
+    transform: translateX(5%);
+    transition: ease-in, opacity 1s, transform 1s;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .js-zoom {
+    opacity: 0;
+
+    transition: ease-in, opacity 1s;
+
+    img {
+      transition: ease-in, transform 1s;
+      transform: scale(1.1);
     }
 
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translate3d(15%, 0, 0);
-      }
+    &--active {
+      opacity: 1;
 
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+      img {
+        transform: scale(1.0);
       }
     }
+  }
 
-    @keyframes fadeInBottom {
-      from {
-        opacity: 0;
-        transform: translate3d(0, 15%, 0);
-      }
 
-      to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
+  .js-clip {
+    transition: ease-in, clip-path 1s;
+    clip-path: polygon(0px 0px, 100% 0px, 100% 0%, 0% 0%);
+
+    &--active {
+
+      clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%);
     }
+  }
 
-    .js-fadeIn,
-    .js-fadeInLeft,
-    .js-fadeInRight,
-    .js-fadeInBottom {
-      opacity: 0;
-      animation-delay: 0.3s;
-      animation-duration: 3s;
-      animation-fill-mode: both;
+  .js-width {
+    width: 0;
+
+    &--active {
+      width: calc(120 *(#{100vw}/ #{$d-width}));
     }
+  }
 
-    .js-fadeInGroupFirst {
-      opacity: 0;
-      animation-delay: 0.3s;
-      animation-duration: 3s;
-      animation-fill-mode: both;
+  .js-fadeInTopLeft {
+    opacity: 0;
+    transform: translateX(10%);
+    transition: ease-in, opacity 1s, transform 1s;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
     }
+  }
 
-    .js-fadeInGroup {
-      opacity: 0;
-      animation-delay: 0.3s;
-      animation-duration: 1s;
-      animation-fill-mode: both;
+  .js-fadeInTopRight {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: ease-in, opacity 1s, transform 1s;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
     }
+  }
 
-    .js-fadeIn,
-    .js-fadeInGroup,
-    .js-fadeInGroupFirst {
-      &--active {
-        animation-name: fadeIn;
-      }
+  .js-fadeInBottom {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: ease-in, opacity 1s, transform 1s;
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .js-fadeInLeft {
-      &--active {
-        animation-name: fadeInLeft;
-      }
+  .js-fadeInLeft {
+    opacity: 0;
+    transform: translateX(10%);
+    transition: ease-in, opacity 1s, transform 1s;
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
     }
+  }
 
-    .js-fadeInRight {
-      &--active {
-        animation-name: fadeInRight;
-      }
-    }
+  .js-fadeInRightBottom {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: ease-in, opacity 1s, transform 1s;
 
-    .js-fadeInBottom {
-      &--active {
-        animation-name: fadeInBottom;
-      }
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

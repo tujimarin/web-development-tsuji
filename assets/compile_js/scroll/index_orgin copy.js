@@ -3,41 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!landingContentEl) {
         return false;
     }
-    const swiperEls = document.getElementsByClassName('main_swiper');
-    if (swiperEls.length) {
-        const swiperMain = new Swiper('.main_swiper', {
-            loop: true,
-            centeredSlides: true,
-            slidesPerView: 1.16,
-            speed: 2000,
-            spaceBetween: 5,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                hideOnClick: false,
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {},
-            },
-        });
-    }
     if (window.innerWidth <= 768) {
         document.querySelectorAll('.css-section').forEach(section => {
-            const sectionEl = section;
-            const height = sectionEl.offsetHeight +
-                parseInt(getComputedStyle(sectionEl).marginTop) +
-                parseInt(getComputedStyle(sectionEl).marginBottom) +
-                parseInt(getComputedStyle(sectionEl).paddingTop);
+            const height = section.offsetHeight +
+                parseInt(getComputedStyle(section).marginTop) +
+                parseInt(getComputedStyle(section).marginBottom) +
+                parseInt(getComputedStyle(section).paddingTop);
+            // parseInt(getComputedStyle(section).paddingBottom);
             const calcHeight = `-${height * 100 / 1000}vh`;
-            sectionEl.style.top = calcHeight;
+            console.log(calcHeight);
+            section.style.top = calcHeight;
         });
     }
     const target = landingContentEl.querySelectorAll('.js-fadeIn,.js-zoom,.js-clip,.js-width,.js-fadeInBottom,.js-fadeInLeft,.js-fadeInRightBottom,.js-fadeInTopLeft,.js-fadeInTopRight');
@@ -63,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     target.forEach((tgt) => {
         observer.observe(tgt);
     });
+    // 要素を取得
     const headerElement = document.querySelector(".header");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {

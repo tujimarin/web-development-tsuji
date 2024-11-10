@@ -1,0 +1,38 @@
+@use "./common/settings";
+
+@use "./common/l" as landing-page_l;
+@use "./common/s" as landing-page_s;
+
+.landing_content {
+  // @include settings.family-main;
+  // overflow-x: hidden;
+  // contain: paint;
+
+  --color1: #333333;
+  --color2: #fff;
+  --color3: #FAEDCE;
+}
+
+.js-scroll_lock {
+  overflow: hidden;
+}
+
+@media (max-width: 1400px) and (min-width: 768px) {
+  html {
+    font-size: calc(10*(#{100vw} / #{1280}));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .s-view {
+    display: none !important;
+  }
+  @include landing-page_l.landing-page;
+}
+
+@media screen and (max-width: 767px) {
+  .l-view {
+    display: none !important;
+  }
+  @include landing-page_s.landing-page;
+}
