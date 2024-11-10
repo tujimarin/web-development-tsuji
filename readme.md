@@ -1,5 +1,7 @@
 # 過去実装したものまとめ
 
+[index page : https://tujimarin.github.io/web-development-tsuji/](https://tujimarin.github.io/web-development-tsuji/)
+
 ## スクロール発火条件のプラグイン無しで実装
 
 <https://tujimarin.github.io/web-development-tsuji/scroll/index.html>
