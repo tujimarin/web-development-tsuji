@@ -1,0 +1,263 @@
+{
+  // Place your snippets for scss here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "環境のデフォルト": {
+    "prefix": "font include",
+    "body": [
+      "@include settings.family-main;"
+    ]
+  },
+  "フォント呼び出し angie-sans": {
+    "prefix": "font include",
+    "body": [
+      "@include settings.family-angie-sans;"
+    ]
+  },
+  "フォント呼び出し nitti-grotesk": {
+    "prefix": "font include TimesNewRoman",
+    "body": [
+      "@include settings.family-TimesNewRoman;"
+    ]
+  },
+  "kasu safari用": {
+    "prefix": "width aspect",
+    "body": [
+      " position: relative;",
+      "display: block;",
+      "object-fit: cover;"
+    ]
+  },
+  "よく使う方flex": {
+    "prefix": "flex",
+    "description": "flex",
+    "body": [
+      "display: flex;",
+      "justify-content: flex-end;",
+      "align-items: center;",
+      "flex-direction: column; // 縦並び",
+      "flex-wrap: wrap;"
+    ]
+  },
+  "よく使う方 width pc": {
+    "prefix": "width_l",
+    "description": "width_l",
+    "body": [
+      "width: settings.get_rem(${1: });",
+      "aspect-ratio: ${2: }/${3: };",
+      "object-fit: cover;"
+    ]
+  },
+  "よく使う方 p center": {
+    "prefix": "center absolute",
+    "description": "center absolute",
+    "body": [
+      "left: 50%;",
+      "transform: translateX(-50%);",
+      "margin: auto;",
+    ]
+  },
+  "font_set": {
+    "prefix": "font_set",
+    "description": "font_set",
+    "body": [
+      "margin-top: calc($1 *(#{100vw}/ #{\\$d-width}));",
+      "@include settings.rem($2);",
+      "@include settings.font-feature-settings_type$3;",
+      "letter-spacing: calc($4/1000) + em;",
+      "@include settings.line-height($5, $6);",
+      "text-align: $7;"
+    ]
+  },
+  "img_set_sp": {
+    "prefix": "img_set_sp",
+    "description": "img_set_sp",
+    "body": [
+      "width: calc(660 *(#{100vw}/ #{\\$d-width}));",
+      "max-width: 660px;",
+      "height: auto;",
+      "aspect-ratio: 660 / 825;"
+    ]
+  },
+  "width_calc_set": {
+    "prefix": "width_calc",
+    "description": "width_calc",
+    "body": [
+      "max-width: ${1:指定のサイズ} + px;",
+      "width: calc(${2:指定のサイズ} *(#{100vw}/ #{\\$d-width}));",
+      "aspect-ratio: ${3:横指定のサイズ}/${4:縦指定のサイズ};"
+    ]
+  },
+  "calc_width": {
+    "prefix": "calc_width",
+    "description": "calc_width",
+    "body": [
+      "@include settings.calc_width($1);",
+      "aspect-ratio: 1/1;"
+    ]
+  },
+  "font_rem": {
+    "prefix": "font_rem",
+    "description": "mixin rem",
+    "body": [
+      "@include settings.rem($1)"
+    ]
+  },
+  "calc_font": {
+    "prefix": "calc_font",
+    "description": "mixin calc_font",
+    "body": [
+      "@include settings.calc_font($1)"
+    ]
+  },
+  "デバッグ用": {
+    "prefix": "calc_dev",
+    "description": "mixin calc_font",
+    "body": [
+      "calc(516 * 100vw / 750)"
+    ]
+  },
+  "sticky利用時のoverflow:hidden": {
+    "prefix": "overflow visible",
+    "body": [
+      "overflow: visible;",
+      "contain: paint;"
+    ]
+  },
+  "width_default": {
+    "prefix": "width_default",
+    "description": "width 基本のやつ",
+    "body": [
+      "@include settings.rem_width($1)",
+      "margin: 0 auto;",
+    ]
+  },
+  "img_default": {
+    "prefix": "img_default",
+    "description": "基本のやつ",
+    "body": [
+      "width: 100%;",
+      "height: auto;",
+      "display: block;",
+      "@include settings.rem_width($1)",
+    ]
+  },
+  "カーニング:0 & 文字組み設定: なし・行末約物半角": {
+    "prefix": "font-feature-settings",
+    "description": "font-feature-settings",
+    "body": [
+      "@include settings.font-feature-settings_type1;"
+    ]
+  },
+  "カーニング:0 & 文字組み設定: 約物半角": {
+    "prefix": "font-feature-settings",
+    "description": "font-feature-settings",
+    "body": [
+      "@include settings.font-feature-settings_type2;"
+    ]
+  },
+  "カーニング:メトリクス & 組み設定: なし": {
+    "prefix": "font-feature-settings",
+    "description": "font-feature-settings",
+    "body": [
+      "@include settings.font-feature-settings_type3;"
+    ]
+  },
+  "カーニング:メトリクス & 組み設定: 行末約物半角": {
+    "prefix": "font-feature-settings",
+    "description": "font-feature-settings",
+    "body": [
+      "@include settings.font-feature-settings_type4;"
+    ]
+  },
+  "picture_img_set": {
+    "prefix": "picture_img_set",
+    "description": "picture_img_set",
+    "body": [
+      ">picture {",
+      ">img {",
+      "width: 100%;",
+      "height: auto;",
+      "display: block;",
+      "@include settings.rem_width($1)",
+      "}",
+      "}"
+    ]
+  },
+  "get_rem": {
+    "prefix": "get_rem",
+    "description": "get_rem",
+    "body": [
+      "settings.get_rem($1)"
+    ]
+  },
+  "get_rem": {
+    "prefix": "get_rem",
+    "description": "get_rem",
+    "body": [
+      "settings.get_rem($1)"
+    ]
+  },
+  "rate width": {
+    "prefix": "rate",
+    "description": "get_rate",
+    "body": [
+      "settings.get_rate($1,\\$d-width)"
+    ]
+  },
+  "rate height": {
+    "prefix": "rate",
+    "description": "get_rate",
+    "body": [
+      "settings.get_rate($1,\\$page-height)"
+    ]
+  },
+  "get_calc": {
+    "prefix": "get_calc",
+    "description": "get_calc",
+    "body": [
+      "calc(${1:pxとして入れたい数値} *(#{100vw}/ #{\\$d-width}))"
+    ]
+  },
+  "get_calc pc": {
+    "prefix": "get_calc",
+    "description": "get_calc",
+    "body": [
+      "calc(${1:pxとして入れたい数値}* var(--rate));"
+    ]
+  },
+  "letter-spacing": {
+    "prefix": "letter-spacing_ai",
+    "description": "ai letter-spacing",
+    "body": [
+      "letter-spacing: calc($1/1000) + em;"
+    ]
+  },
+  "transition_all": {
+    "prefix": "transition_all",
+    "body": [
+      "transition: all ${1:ここに時間}s;"
+    ]
+  },
+  "trim hight": {
+    "prefix": "trim_hight",
+    "body": [
+      "position: absolute;",
+      "top: 50%;",
+      "left: 50%;",
+      "transform: translate(-50%, -50%);",
+      "width: auto;",
+      "height: 100%;"
+    ]
+  }
+}
