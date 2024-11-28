@@ -1,0 +1,74 @@
+@use "../common/settings.scss";
+@use '../animation/animation_s' as animation;
+
+$d-width: 750;
+
+@mixin landing-page {
+  #home {
+    @include animation.mainAnimation;
+    width: 100%;
+    max-width: settings.get_rem($d-width);
+    margin: 0 auto;
+    padding: settings.get_rem(50) 0;
+
+
+
+    .css-headline1 {
+
+      text-align: center;
+    }
+
+    .css-headline2 {
+
+      text-align: left;
+    }
+
+    .css-main_visual {
+      width: calc(300 *(#{100vw}/ #{$d-width}));
+      aspect-ratio: 3/4;
+      margin: 0 auto;
+      margin-top: settings.get_rem(50);
+    }
+
+    .css-my_profile {
+      // width: calc(600 *(#{100vw}/ #{$d-width}));
+      margin: 0 auto;
+      margin-top: settings.get_rem(50);
+
+      .css-my_profile_detail {
+        margin-top: settings.get_rem(20);
+
+        dl {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+
+          flex-direction: column; // 縦並び
+
+
+          &:not(:first-of-type) {
+            margin-top: settings.get_rem(20);
+          }
+
+          // row-gap: 5%;
+          column-gap: settings.get_rem(10);
+
+          dt {
+            // width: 15%;
+            font-size: settings.get_rem(16);
+            font-weight: bold;
+          }
+
+          dd {
+            font-size: settings.get_rem(16);
+            // width: 70%;
+          }
+        }
+      }
+
+    }
+
+
+  }
+}

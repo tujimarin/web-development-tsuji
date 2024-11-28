@@ -1,0 +1,22 @@
+@use "./common/settings";
+
+@use "./assets_sticky/common/l" as landing-page_l;
+@use "./assets_sticky/common/s" as landing-page_s;
+
+
+.landing_page_sticky {
+  --color1: #000;
+  --color2: #fff;
+  --color3: #FEF9EF;
+  --color4: #C3CDD0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  @include landing-page_l.landing-page;
+}
+
+@media screen and (max-width: 767px) {
+  @include landing-page_s.landing-page;
+}

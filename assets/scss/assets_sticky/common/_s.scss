@@ -1,0 +1,362 @@
+@use "./settings";
+@use '../animation/animation_s' as animation;
+
+
+$d-width: 750;
+$dc-width: 680;
+
+@mixin landing-page {
+  @include animation.mainAnimation;
+
+
+
+  .landing_page_sticky {
+    @include animation.mainAnimation;
+    overflow: visible;
+    contain: paint;
+
+    .l-view {
+      display: none !important;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    .css-section {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: var(--color3);
+
+      .css-section_wrapper {
+        margin: 0 auto;
+        position: relative;
+        width: calc(650 *(#{100vw}/ #{$d-width}));
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        .css-sticky {
+          position: sticky;
+          top: 0;
+          width: calc(210 *(#{100vw}/ #{$d-width}));
+          height: 100svh;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column; // 縦並び
+        }
+
+        .css-image_area {
+          width: calc(440 *(#{100vw}/ #{$d-width}));
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          row-gap: calc(10 *(#{100vw}/ #{$d-width}));
+
+          .css-image {
+            width: 100%;
+            max-width: calc(440 *(#{100vw}/ #{$d-width}));
+            aspect-ratio: 440/670;
+          }
+        }
+
+
+      }
+
+      .css-credit {
+        position: relative;
+        white-space: nowrap;
+        text-align: left;
+
+        .css-credit_link,
+        .css-credit_slash {
+          display: inline-block;
+          @include settings.family-eb-garamond;
+          font-size: calc(17 *(#{100vw}/ #{$d-width}));
+          letter-spacing: calc(0/1000) + em;
+          line-height: calc(30 *(#{100vw}/ #{$d-width}));
+          @include settings.font-feature-settings_type3;
+        }
+
+        .css-credit_link+.css-credit_slash {
+          margin-left: calc(0 *(#{100vw}/ #{$d-width}));
+        }
+
+        .css-credit_slash+.css-credit_link,
+        .l-view+.css-credit_link,
+        .s-view+.css-credit_link {
+          margin-top: calc(0 *(#{100vw}/ #{$d-width}));
+        }
+
+      }
+    }
+
+    .css-mainvisual {
+      background-color: var(--color3);
+      aspect-ratio: #{$d-width}/1580;
+      padding-top: calc(80 *(#{100vw}/ #{$d-width}));
+      z-index: 1;
+
+      &_logo {
+        margin: 0 auto;
+        position: relative;
+        left:calc(-10 *(#{100vw}/ #{$d-width}));
+        width: calc(569.435 *(#{100vw}/ #{$d-width}));
+        aspect-ratio: 569.435/169.5922;
+      }
+
+      .css-mainvisual_image {
+        width: calc(650 *(#{100vw}/ #{$d-width}));
+        aspect-ratio: 650/800;
+        margin: 0 auto;
+        margin-top: calc(30 *(#{100vw}/ #{$d-width}));
+      }
+
+      &_headline1 {
+        margin: 0 auto;
+        margin-top: calc(100 *(#{100vw}/ #{$d-width}));
+        position: relative;
+        left:calc(0 *(#{100vw}/ #{$d-width}));
+        width: calc(274.0468 *(#{100vw}/ #{$d-width}));
+        aspect-ratio: 274.0468/48.5149;
+      }
+
+      &_text {
+        text-align: center;
+        margin-top: calc(40 *(#{100vw}/ #{$d-width}));
+        @include settings.family-eb-garamond;
+        font-size: calc(15 *(#{100vw}/ #{$d-width}));
+        letter-spacing: calc(20/1000) + em;
+        line-height: calc(39.62 *(#{100vw}/ #{$d-width}));
+        @include settings.font-feature-settings_type3;
+      }
+
+      &_headline2 {
+        margin: 0 auto;
+        position: relative;
+        margin-top: calc(36 *(#{100vw}/ #{$d-width}));
+        left:calc(-3 *(#{100vw}/ #{$d-width}));
+        width: calc(108.5082 *(#{100vw}/ #{$d-width}));
+        aspect-ratio: 108.5082/17.5389;
+      }
+    }
+
+    .css-section1 {
+      background-color: var(--color3);
+      width: 100%;
+      aspect-ratio: #{$d-width}/1450;
+      padding-bottom: calc(50 *(#{100vw}/ #{$d-width}));
+      z-index: 2;
+      border-top: solid 1px var(--color4);
+
+      .css-section_wrapper {
+        padding-top: calc(50 *(#{100vw}/ #{$d-width}));
+
+
+        .css-sticky {
+          margin: 0 auto;
+          margin-top: calc(322 *(#{100vw}/ #{$d-width}));
+          margin-bottom: calc(100 *(#{100vw}/ #{$d-width}));
+          top: calc(0 *(#{100vw}/ #{$d-width}));
+
+
+
+          .css-headline {
+            width: calc(162.0918 *(#{100vw}/ #{$d-width}));
+            aspect-ratio: 162.0918/88.7539;
+            position: relative;
+            left: calc(0 *(#{100vw}/ #{$d-width}));
+          }
+
+          .css-credit {
+            position: relative;
+            top: calc(42 *(#{100vw}/ #{$d-width}));
+            left: calc(0 *(#{100vw}/ #{$d-width}));
+          }
+        }
+      }
+    }
+
+    .css-section2 {
+      background-color: var(--color3);
+      aspect-ratio: #{$d-width}/2130;
+      padding-bottom: calc(50 *(#{100vw}/ #{$d-width}));
+      z-index: 3;
+      border-top: solid 1px var(--color4);
+
+      .css-section_wrapper {
+        padding-top: calc(50 *(#{100vw}/ #{$d-width}));
+
+        .css-sticky {
+          order: 2;
+          margin: 0 auto;
+          margin-top: calc(370 *(#{100vw}/ #{$d-width}));
+          top: calc(0 *(#{100vw}/ #{$d-width}));
+
+          .css-headline {
+            width: calc(166.4761 *(#{100vw}/ #{$d-width}));
+            aspect-ratio: 166.4761/88.7534;
+            position: relative;
+            left: calc(44 *(#{100vw}/ #{$d-width}));
+          }
+
+          .css-credit {
+            position: relative;
+            margin-top: calc(41 *(#{100vw}/ #{$d-width}));
+            left: calc(50 *(#{100vw}/ #{$d-width}));
+          }
+        }
+
+        .css-image_area {
+          order: 1;
+          align-items: self-end;
+        }
+
+
+
+
+      }
+    }
+
+    .css-section3 {
+      background-color: var(--color3);
+      aspect-ratio: #{$d-width}/2130;
+      padding-bottom: calc(50 *(#{100vw}/ #{$d-width}));
+      z-index: 4;
+      border-top: solid 1px var(--color4);
+
+      .css-section_wrapper {
+        padding-top: calc(50 *(#{100vw}/ #{$d-width}));
+
+        .css-image {
+          background-color: #D1D6D8;
+        }
+
+        .css-sticky {
+          margin: 0 auto;
+          margin-top: calc(350 *(#{100vw}/ #{$d-width}));
+          margin-bottom: calc(100 *(#{100vw}/ #{$d-width}));
+          top: calc(0 *(#{100vw}/ #{$d-width}));
+
+          .css-headline {
+            width: calc(166.3975 *(#{100vw}/ #{$d-width}));
+            aspect-ratio: 166.3975/88.7539;
+            position: relative;
+            left: calc(0 *(#{100vw}/ #{$d-width}));
+          }
+
+          .css-credit {
+            position: relative;
+            top: calc(40 *(#{100vw}/ #{$d-width}));
+            left: calc(0 *(#{100vw}/ #{$d-width}));
+          }
+        }
+
+        .css-image_area {
+          order: 2;
+        }
+
+      }
+    }
+
+    .css-section4 {
+      background-color: var(--color3);
+      aspect-ratio: #{$d-width}/2130;
+      z-index: 5;
+      border-top: solid 1px var(--color4);
+      position: relative;
+
+      .css-section_wrapper {
+        padding-top: calc(50 *(#{100vw}/ #{$d-width}));
+        padding-bottom: calc(50 *(#{100vw}/ #{$d-width}));
+
+        .css-image {
+          background-color: #D1D6D8;
+        }
+
+        .css-sticky {
+          order: 2;
+          margin: 0 auto;
+          margin-top: calc(375 *(#{100vw}/ #{$d-width}));
+          top: calc(0 *(#{100vw}/ #{$d-width}));
+
+          .css-headline {
+            width: calc(168.0957 *(#{100vw}/ #{$d-width}));
+            aspect-ratio: 168.0957/168.0957;
+            position: relative;
+            left: calc(44 *(#{100vw}/ #{$d-width}));
+          }
+
+          .css-credit {
+            position: relative;
+            top: calc(-37 *(#{100vw}/ #{$d-width}));
+            left: calc(50 *(#{100vw}/ #{$d-width}));
+          }
+        }
+
+        .css-image_area {
+          order: 1;
+          align-items: self-end;
+        }
+
+      }
+    }
+
+    .css-footer-content {
+      width: 100%;
+      height: calc(869* 100vw / 750);
+      background-color: var(--color2);
+      padding-top: calc(90 *(#{100vw}/ #{$d-width}));
+
+      .css-footer_headline {
+        margin: 0 auto;
+        margin-top: calc(0 *(#{100vw}/ #{$d-width}));
+        width: calc(372.9897 *(#{100vw}/ #{$d-width}));
+        aspect-ratio: 372.9897/81.0248;
+      }
+
+      .css-check_all {
+        margin: 0 auto;
+        margin-top: calc(76 *(#{100vw}/ #{$d-width}));
+
+        .css-check_all_link {
+          margin: 0 auto;
+          width: calc(217.242 *(#{100vw}/ #{$d-width}));
+          aspect-ratio: 217.242/27.4638;
+        }
+      }
+
+      .css-staff_credit {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: calc(85 *(#{100vw}/ #{$d-width}));
+
+        .css-staff_credit_image {
+          width: 100%;
+          height: auto;
+        }
+
+        .css-staff_credit_text {
+          position: absolute;
+          @include settings.family-eb-garamond;
+          text-align: right;
+          font-size: calc(12 *(#{100vw}/ #{$d-width}));
+          line-height: calc(28.35 *(#{100vw}/ #{$d-width}));
+          letter-spacing: calc(0/1000) + em;
+          right: calc(49 *(#{100vw}/ #{$d-width}));
+          bottom: calc(39 *(#{100vw}/ #{$d-width}));
+          color: var(--color2);
+        }
+      }
+    }
+  }
+
+}

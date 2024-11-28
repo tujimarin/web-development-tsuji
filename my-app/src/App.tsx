@@ -1,17 +1,15 @@
 // import "./styles.css";
-import { Routes, Route } from "react-router-dom"; 
-import { SampleHome } from './components/SampleHome';
-import { SamplePage1 } from "./components/SamplePage1";
-import { SamplePage2 } from './components/SamplePage2';
+import { Routes, Route } from "react-router-dom";
+import { Home } from './components/Home';
+import { Page1 } from './components/Page1';
+import { Page2 } from './components/Page2';
 
 export default function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/web-development-tsuji" element={<SampleHome />} />
-        <Route path="/web-development-tsuji/page1" element={<SamplePage1 />} />
-        <Route path="/web-development-tsuji/page2" element={<SamplePage2 />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/web-development-tsuji" element={<Home />} />
+      <Route path="/web-development-tsuji/page1" element={<Page1 />} />
+      <Route path="/web-development-tsuji/page2" element={<Page2 />} />
+    </Routes>
   );
 }

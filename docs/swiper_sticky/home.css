@@ -1,0 +1,191 @@
+@media screen and (min-width: 768px) {
+  #home {
+    width: 100%;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+  #home .js-fadeIn {
+    opacity: 0;
+    transition: ease-in, opacity 1s;
+  }
+  #home .js-fadeIn--active {
+    opacity: 1;
+  }
+  #home .css-headline1 {
+    text-align: center;
+  }
+  #home .css-headline2 {
+    text-align: left;
+  }
+  #home .css-main_visual {
+    width: calc(300 * 100vw / 1400);
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+    margin-top: 5rem;
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.6));
+  }
+  #home .css-my_profile {
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  #home .css-my_profile .css-my_profile_detail {
+    margin-top: 5rem;
+  }
+  #home .css-my_profile .css-my_profile_detail dl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    column-gap: 1rem;
+  }
+  #home .css-my_profile .css-my_profile_detail dl:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+  #home .css-my_profile .css-my_profile_detail dl dt {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  #home .css-my_profile .css-my_profile_detail dl dd {
+    font-size: 1.6rem;
+  }
+  #home .css-implementation {
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  #home .css-implementation .css-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--common-color3);
+    width: 15rem;
+    aspect-ratio: 1/1;
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.6));
+    font-size: 1.6rem;
+  }
+  #home .css-implementation .css-link_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-top: 5rem;
+  }
+  #home .css-work {
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  #home .css-work .css-work_list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  #home .css-work .css-work_list .css-work_list_item {
+    width: 30%;
+    background-color: var(--common-color3);
+    border-radius: 2rem;
+    -webkit-filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.6));
+    padding: 2rem 1rem;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--common-color1);
+    width: 100%;
+    aspect-ratio: 1/1;
+    color: var(--common-color2);
+    font-size: 1.6rem;
+    border-radius: 10rem;
+    overflow: hidden;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_thumbnail img {
+    height: 100%;
+    object-fit: cover;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_detail {
+    margin-top: 2rem;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_detail dl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    column-gap: 1rem;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_detail dl:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_detail dl dt {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: var(--common-color1);
+    display: block;
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+  }
+  #home .css-work .css-work_list .css-work_list_item .css-work_list_item_detail dl dd {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #home {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+  #home .js-fadeIn {
+    opacity: 0;
+    transition: ease-in, opacity 1s;
+  }
+  #home .js-fadeIn--active {
+    opacity: 1;
+  }
+  #home .css-headline1 {
+    text-align: center;
+  }
+  #home .css-headline2 {
+    text-align: left;
+  }
+  #home .css-main_visual {
+    width: calc(300 * 100vw / 750);
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  #home .css-my_profile {
+    margin: 0 auto;
+    margin-top: 5rem;
+  }
+  #home .css-my_profile .css-my_profile_detail {
+    margin-top: 2rem;
+  }
+  #home .css-my_profile .css-my_profile_detail dl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    column-gap: 1rem;
+  }
+  #home .css-my_profile .css-my_profile_detail dl:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+  #home .css-my_profile .css-my_profile_detail dl dt {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  #home .css-my_profile .css-my_profile_detail dl dd {
+    font-size: 1.6rem;
+  }
+}

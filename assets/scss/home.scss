@@ -1,0 +1,12 @@
+@use "./common/settings";
+@use "./asset_home/l" as landing-page_l;
+@use "./asset_home/s" as landing-page_s;
+
+
+@media screen and (min-width: 768px) {
+  @include landing-page_l.landing-page;
+}
+
+@media screen and (max-width: 767px) {
+  @include landing-page_s.landing-page;
+}

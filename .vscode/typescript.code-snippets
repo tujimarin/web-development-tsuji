@@ -4,6 +4,12 @@
   // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
   // same ids are connected.
   // Example:
+  "image_path": {
+    "prefix": "image_path",
+    "body": [
+      "{`${process.env.PUBLIC_URL}/images/${1:フォルダ名}/${2:画像}`}"
+    ]
+  },
   "単一のclass名でhtmlを変化したい時": {
     "prefix": "element_class",
     "body": [

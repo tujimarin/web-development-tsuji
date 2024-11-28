@@ -27,5 +27,9 @@
 基本的にはなるべく使わないように実装を心がけている。
 
 
+https://react-slick.neostack.com/
 
 npm install react-router-dom
+
+{console.table({ a: ["A1", "A2"], b: ["B1", "B2"] })}
+      {console.log("hoge")}

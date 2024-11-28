@@ -1,0 +1,22 @@
+@use "./common/settings";
+
+@use "./assets_scroll/common/l" as landing-page_l;
+@use "./assets_scroll/common/s" as landing-page_s;
+
+.landing_content_scroll {
+  --color1: #333333;
+  --color2: #fff;
+  --color3: #FAEDCE;
+}
+
+.js-scroll_lock {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  @include landing-page_l.landing-page;
+}
+
+@media screen and (max-width: 767px) {
+  @include landing-page_s.landing-page;
+}

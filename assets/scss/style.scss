@@ -5,35 +5,88 @@
 @use "./common/reset" as reset;
 
 
-// @font-face {
-//   font-family: '小塚ゴシック Pr6N';
-//   src: url("/fonts/KozGoPr6N-Regular.otf") format("opentype");
-// }
-
 html,
 body {
   font-size: 62.5%;
+  @include settings.family-main;
 }
 
 body {
   margin: 0;
+
+  --common-color1: #272727;
+  --common-color2: #fff;
+  --common-color3: #f13932;
+  --common-color4: #000;
 }
 
-#landing_content {
-  overflow: visible;
-  contain: paint;
+body {
+  background-color: var(--common-color1);
 
-  // --color1: #000;
-  // --color2: #fff;
+  p,
+  a,
+  span,
+  dd {
+    color: var(--common-color2);
+    word-break: break-all;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  dt {
+    color: var(--common-color3);
+    word-break: break-all;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    background-color: var(--common-color4);
+    padding: 1%;
+    -webkit-filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.60));
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.60));
+  }
+
+
+  h1 {
+    font-size: settings.get_rem(26);
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: settings.get_rem(22);
+    font-weight: bold;
+  }
+
+  a {
+    opacity: 1;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
+
+img {
+  width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
 
 @include reset.reset;
 
-@media screen and (min-width: 768px) {
-  @include landing-page_l.landing-page;
-}
+// @media screen and (min-width: 768px) {
+//   @include landing-page_l.landing-page;
+// }
 
-@media screen and (max-width: 767px) {
-  @include landing-page_s.landing-page;
-}
+// @media screen and (max-width: 767px) {
+//   @include landing-page_s.landing-page;
+// }

@@ -4,28 +4,9 @@ $master-width: width-value + px;
 $content-width-value: 100;
 $content-width: $content-width-value + #{"%"};
 
-
-// font: 和文
 @mixin family-main {
-  font-family: "Times New Roman", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 游ゴシック体, 游ゴシック Medium, Yu Gothic Medium, Yu Gothic, YuGothic, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
 }
-
-@mixin family-kozuka-gothic-pr6n {
-  font-family: "小塚ゴシック Pr6N", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-@mixin family-apparat-light {
-  font-family: "apparat-light", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
 
 @mixin font-feature-settings_type1 {
   // イラレの文字間カーニング:0

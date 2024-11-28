@@ -1,0 +1,29 @@
+@use "../common/settings";
+
+$d-width: 750;
+$dc-width: 660;
+
+
+@mixin mainAnimation {
+
+  .js-fadeIn,
+  .js-groupFadeIn {
+    opacity: 0;
+    // transition: opacity 1.0s ease-in;
+    transition: ease-in, opacity 2s;
+    // opacity: 0;
+    // transition: all 1s;
+
+    &.js-delay1 {
+      transition-delay: 0.5s;
+    }
+
+    &.js-delay2 {
+      transition-delay: 0.8s;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}

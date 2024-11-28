@@ -1,0 +1,6 @@
+@media screen and (min-width: 768px) {
+  .mainVisual {
+    width: calc(1200 * 100vw / 1400);
+    aspect-ratio: 1200/500;
+  }
+}

@@ -24,8 +24,10 @@ const minimist = require('minimist');
 const jsFilename = 'index';
 const origin_path = "./assets/";
 const work_pash = "docs/swiper_sticky/";
+const work_r_pash = "my-app/src/styles/";
+
 const asset_path = './assets/images/';
-const develop_path = './' + work_pash;
+const develop_path = './' + work_r_pash;
 const staging_path = './' + work_pash;
 const master_path = './master/' + work_pash;
 
@@ -33,8 +35,8 @@ const master_path = './master/' + work_pash;
 const paths = {
   css: {
     src: origin_path + 'scss/**/*.scss',
-    dest_dev: develop_path + 'css/',
-    dest_stg: staging_path + 'css/',
+    dest_dev: develop_path,
+    dest_stg: staging_path,
     dest_master: master_path + 'css/'
   },
   js: {
