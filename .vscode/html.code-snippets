@@ -63,17 +63,5 @@
     "body": [
       "js-clipPathOnRight",
     ]
-  },
-  "is-valid-product": {
-    "prefix": "is-valid-product",
-    "body": [
-      "<?php /*",
-      "<% if (BaseMasterPage.IsValidProduct(\"$1\")) { %>",
-      "*/?>",
-      "<?php /*",
-      "<% }else{ %>",
-      "<% } %>",
-      "*/?>"
-    ]
   }
 }

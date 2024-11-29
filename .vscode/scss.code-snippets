@@ -203,13 +203,6 @@
       "settings.get_rem($1)"
     ]
   },
-  "get_rem": {
-    "prefix": "get_rem",
-    "description": "get_rem",
-    "body": [
-      "settings.get_rem($1)"
-    ]
-  },
   "rate width": {
     "prefix": "rate",
     "description": "get_rate",
