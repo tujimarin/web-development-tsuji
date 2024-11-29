@@ -1,46 +1,47 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio
 
-## Available Scripts
+自身の技術ナレッジを貯めることを目的として作成
+制作の雛形として、自身が更新しやすい用にアップデートを繰り返して行く
 
-In the project directory, you can run:
+ページの確認 : <https://tujimarin.github.io/web-development-tsuji/>
 
-### `npm start`
+コードの確認 : <https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/src/components/Home.tsx>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## スクロールトリガーページのコード
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+スクロール量でアニメーションが発火するような仕組みを実装
 
-### `npm test`
+pcでは横、SPでは縦で、更新の手間を軽減するためhtmlのコードを分けずにコーディング
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ページの確認 : <https://tujimarin.github.io/web-development-tsuji/page1>
 
-### `npm run build`
+コードの確認 : <https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/src/components/Page1.tsx>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## せり上がりページのコード
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+通常のLPでよくあるせり上がりの表現の雛形として実装
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ページの確認 : <https://tujimarin.github.io/web-development-tsuji/page2>
 
-### `npm run eject`
+コードの確認 : <https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/src/components/Page2.tsx>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<https://github.com/tujimarin/web-development-tsuji>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# 開発環境
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+vscode
 
-## Learn More
+nodejs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+react&Typescript
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+scss
+
+gulp
+
+## バージョンの詳細
+
+<https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/package.json>
