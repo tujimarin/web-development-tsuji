@@ -14,7 +14,6 @@ $d-width: 1400;
 
 
     .css-headline1 {
-
       text-align: center;
     }
 
@@ -51,11 +50,13 @@ $d-width: 1400;
 
           &:not(:first-of-type) {
             margin-top: settings.get_rem(20);
+            padding-top: settings.get_rem(20);
+            border-top: solid 1px var(--common-color2);
           }
 
-          // row-gap: 5%;
-          column-gap: settings.get_rem(10);
-
+          // column-gap: 5%;
+          row-gap: settings.get_rem(10);
+          
           dt {
             // width: 15%;
             font-size: settings.get_rem(16);

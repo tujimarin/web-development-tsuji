@@ -4,8 +4,24 @@
 $d-width: 1400;
 
 @mixin landing-page {
-  .mainVisual {
-    width: calc(1200 *(#{100vw}/ #{$d-width}));
-    aspect-ratio: 1200/500;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: 1%;
   }
+
+  h1 {
+    font-size: settings.get_rem(26);
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: settings.get_rem(22);
+    font-weight: bold;
+  }
+
+ 
 }

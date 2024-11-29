@@ -47,39 +47,39 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  .landing_content .js-fadeIn,
-  .landing_content .js-fadeInLeft,
-  .landing_content .js-fadeInRight,
-  .landing_content .js-fadeInBottom {
+  .landing_content_scroll .js-fadeIn,
+  .landing_content_scroll .js-fadeInLeft,
+  .landing_content_scroll .js-fadeInRight,
+  .landing_content_scroll .js-fadeInBottom {
     opacity: 0;
     animation-delay: 0.3s;
     animation-duration: 3s;
     animation-fill-mode: both;
   }
-  .landing_content .js-fadeInGroupFirst {
+  .landing_content_scroll .js-fadeInGroupFirst {
     opacity: 0;
     animation-delay: 0.3s;
     animation-duration: 3s;
     animation-fill-mode: both;
   }
-  .landing_content .js-fadeInGroup {
+  .landing_content_scroll .js-fadeInGroup {
     opacity: 0;
     animation-delay: 0.3s;
     animation-duration: 1s;
     animation-fill-mode: both;
   }
-  .landing_content .js-fadeIn--active,
-  .landing_content .js-fadeInGroupFirst--active,
-  .landing_content .js-fadeInGroup--active {
+  .landing_content_scroll .js-fadeIn--active,
+  .landing_content_scroll .js-fadeInGroupFirst--active,
+  .landing_content_scroll .js-fadeInGroup--active {
     animation-name: fadeIn;
   }
-  .landing_content .js-fadeInLeft--active {
+  .landing_content_scroll .js-fadeInLeft--active {
     animation-name: fadeInLeft;
   }
-  .landing_content .js-fadeInRight--active {
+  .landing_content_scroll .js-fadeInRight--active {
     animation-name: fadeInRight;
   }
-  .landing_content .js-fadeInBottom--active {
+  .landing_content_scroll .js-fadeInBottom--active {
     animation-name: fadeInBottom;
   }
   .landing_content_scroll {
@@ -94,6 +94,39 @@
     height: auto;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+  }
+  .landing_content_scroll .css-text {
+    bottom: 3rem;
+    position: absolute;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .landing_content_scroll .css-arrow-down {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    position: relative;
+    width: 0.1em;
+    height: 1em;
+    background: var(--color2);
+  }
+  .landing_content_scroll .css-arrow-down::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.1em solid var(--color2);
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    position: absolute;
+    left: 50%;
+    bottom: -0.05em;
+    box-sizing: border-box;
   }
   .landing_content_scroll .css-firstview {
     position: relative;
@@ -114,10 +147,6 @@
     width: 100%;
     height: 100%;
   }
-  .landing_content_scroll .css-firstview .css-text {
-    position: absolute;
-    font-size: 3rem;
-  }
   .landing_content_scroll .horizontal-container {
     position: relative;
     scroll-snap-align: start;
@@ -136,15 +165,10 @@
   }
   .landing_content_scroll .css-title {
     position: absolute;
-    font-family: "Times New Roman", sans-serif;
-    font-weight: 400;
-    font-style: italic;
     font-style: normal;
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    letter-spacing: 0em;
+    font-size: 1.6rem;
     left: 0;
-    top: 0.5%;
+    top: 0;
   }
   .landing_content_scroll .css-logo {
     position: absolute;
@@ -154,7 +178,7 @@
     top: 31.4%;
   }
   .landing_content_scroll .css-slide_content {
-    background-color: #fff;
+    background-color: var(--common-color1);
     position: absolute;
     width: calc(1200 / 1400 * 100%);
   }
@@ -223,6 +247,7 @@
   }
   .landing_content_scroll .css-slide_content .css-page_num {
     position: absolute;
+    color: var(--color2);
     top: 38.4%;
     left: 0;
   }
@@ -260,26 +285,16 @@
     top: -1.3rem;
   }
   .landing_content_scroll .css-staff_text {
+    margin-top: 4rem;
+  }
+  .landing_content_scroll .css-staff_text a {
     display: block;
     margin: 0 auto;
-    margin-top: 1.9rem;
-    position: relative;
-    left: -1.2rem;
-  }
-  .landing_content_scroll .css-staff_text .css-text {
+    width: 30rem;
+    padding: 1rem;
+    background-color: var(--common-color3);
     text-align: center;
-    font-family: "Times New Roman", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1rem;
-    font-style: italic;
-    line-height: 1.1rem;
-    letter-spacing: 0em;
-    font-feature-settings: "palt";
-  }
-  .landing_content_scroll .css-staff_text .css-text + .css-text {
-    position: relative;
-    margin-top: 0.1rem;
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -321,39 +336,39 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  .landing_content .js-fadeIn,
-  .landing_content .js-fadeInLeft,
-  .landing_content .js-fadeInRight,
-  .landing_content .js-fadeInBottom {
+  .landing_content_scroll .js-fadeIn,
+  .landing_content_scroll .js-fadeInLeft,
+  .landing_content_scroll .js-fadeInRight,
+  .landing_content_scroll .js-fadeInBottom {
     opacity: 0;
     animation-delay: 0.3s;
     animation-duration: 3s;
     animation-fill-mode: both;
   }
-  .landing_content .js-fadeInGroupFirst {
+  .landing_content_scroll .js-fadeInGroupFirst {
     opacity: 0;
     animation-delay: 0.3s;
     animation-duration: 3s;
     animation-fill-mode: both;
   }
-  .landing_content .js-fadeInGroup {
+  .landing_content_scroll .js-fadeInGroup {
     opacity: 0;
     animation-delay: 0.3s;
     animation-duration: 1s;
     animation-fill-mode: both;
   }
-  .landing_content .js-fadeIn--active,
-  .landing_content .js-fadeInGroup--active,
-  .landing_content .js-fadeInGroupFirst--active {
+  .landing_content_scroll .js-fadeIn--active,
+  .landing_content_scroll .js-fadeInGroup--active,
+  .landing_content_scroll .js-fadeInGroupFirst--active {
     animation-name: fadeIn;
   }
-  .landing_content .js-fadeInLeft--active {
+  .landing_content_scroll .js-fadeInLeft--active {
     animation-name: fadeInLeft;
   }
-  .landing_content .js-fadeInRight--active {
+  .landing_content_scroll .js-fadeInRight--active {
     animation-name: fadeInRight;
   }
-  .landing_content .js-fadeInBottom--active {
+  .landing_content_scroll .js-fadeInBottom--active {
     animation-name: fadeInBottom;
   }
   .landing_content_scroll {
@@ -386,17 +401,48 @@
   .landing_content_scroll .css-firstview img {
     width: auto;
     height: 100%;
+    aspect-ratio: 2/4;
     object-fit: cover;
   }
   .landing_content_scroll .css-firstview .css-text {
     position: absolute;
     font-size: calc(30 * 100vw / 375);
+    bottom: calc(20 * 100vw / 375);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .landing_content_scroll .css-firstview .css-arrow-down {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    position: relative;
+    width: calc(1 * 100vw / 375);
+    height: calc(30 * 100vw / 375);
+    background: var(--color2);
+  }
+  .landing_content_scroll .css-firstview .css-arrow-down::before {
+    content: "";
+    width: calc(20 * 100vw / 375);
+    height: calc(20 * 100vw / 375);
+    border: calc(1 * 100vw / 375) solid var(--color2);
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    position: absolute;
+    left: 50%;
+    bottom: calc(-0.5 * 100vw / 375);
+    box-sizing: border-box;
   }
   .landing_content_scroll .horizontal-container {
     position: relative;
     scroll-snap-align: start;
     overflow: visible;
     contain: paint;
+    z-index: 3;
   }
   .landing_content_scroll .horizontal-container_rapper {
     position: sticky;
@@ -405,13 +451,17 @@
     top: 0;
   }
   .landing_content_scroll .css-title {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: calc(12 * 100vw / 375);
+    z-index: 5;
   }
   .landing_content_scroll .css-logo {
     display: none;
   }
   .landing_content_scroll .css-slide_content {
-    background-color: #fff;
+    background-color: var(--common-color1);
     position: absolute;
     width: calc(355 * 100vw / 375);
     height: 97.3333333333dvh;
@@ -457,7 +507,7 @@
   }
   .landing_content_scroll .css-slide_content .css-credit {
     position: absolute;
-    top: calc(476 * 100vw / 375);
+    top: calc(500 * 100vw / 375);
     left: 0;
     transform-origin: left top;
     opacity: 0;
@@ -486,6 +536,7 @@
     bottom: 0;
     left: 0;
     transform-origin: left bottom;
+    color: var(--color2);
   }
   .landing_content_scroll .css-slide_content .css-page_num--count, .landing_content_scroll .css-slide_content .css-page_num--max {
     font-family: "Times New Roman", sans-serif;
@@ -504,7 +555,10 @@
     left: 0;
   }
   .landing_content_scroll .css-footer {
+    position: relative;
     scroll-snap-align: start;
+    background-color: var(--common-color1);
+    z-index: 3;
     padding-top: calc(68 * 100vw / 375);
     padding-bottom: calc(159 * 100vw / 375);
   }
@@ -515,20 +569,15 @@
     margin: 0 auto;
   }
   .landing_content_scroll .css-staff_text {
-    margin: 0 auto;
     margin-top: calc(40 * 100vw / 375);
   }
-  .landing_content_scroll .css-staff_text .css-text {
+  .landing_content_scroll .css-staff_text a {
+    display: block;
+    margin: 0 auto;
+    width: calc(300 * 100vw / 375);
+    padding: calc(10 * 100vw / 375);
+    background-color: var(--common-color3);
     text-align: center;
-    font-family: "Times New Roman", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: calc(12 * 100vw / 375);
-    font-style: italic;
-    line-height: calc(15 * 100vw / 375);
-    letter-spacing: 0em;
-  }
-  .landing_content_scroll .css-staff_text .css-text + .css-text {
-    margin-top: calc(-1 * 100vw / 375);
+    font-size: calc(16 * 100vw / 375);
   }
 }

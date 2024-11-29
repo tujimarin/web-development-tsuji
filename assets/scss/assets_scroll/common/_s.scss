@@ -46,12 +46,44 @@ $dc-width: 590;
       img {
         width: auto;
         height: 100%;
+        aspect-ratio: 2/4;
         object-fit: cover;
       }
 
       .css-text {
         position: absolute;
         font-size: calc(30 *(#{100vw}/ #{$d-width}));
+        bottom: calc(20 *(#{100vw}/ #{$d-width}));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; // 縦並び
+      }
+
+      .css-arrow-down {
+        display: inline-block;
+        vertical-align: middle;
+        color: #333;
+        line-height: 1;
+        position: relative;
+        width:calc(1 *(#{100vw}/ #{$d-width}));
+        height: calc(30 *(#{100vw}/ #{$d-width}));
+        background: var(--color2);
+      }
+
+      .css-arrow-down::before {
+        content: '';
+        width: calc(20 *(#{100vw}/ #{$d-width}));
+        height: calc(20 *(#{100vw}/ #{$d-width}));
+        border: calc(1 *(#{100vw}/ #{$d-width})) solid var(--color2);
+        border-top: 0;
+        border-right: 0;
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+        position: absolute;
+        left: 50%;
+        bottom: calc(-0.5 *(#{100vw}/ #{$d-width}));
+        box-sizing: border-box;
       }
     }
 
@@ -59,16 +91,10 @@ $dc-width: 590;
 
     .horizontal-container {
       position: relative;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
       scroll-snap-align: start;
-      // height: 100vh;
-      // background-color: red;
-      // height: 500vh;
       overflow: visible;
       contain: paint;
-      // overflow: hidden;
+      z-index: 3;
     }
 
     .horizontal-container_rapper {
@@ -79,7 +105,11 @@ $dc-width: 590;
     }
 
     .css-title {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: calc(12 *(#{100vw}/ #{$d-width}));
+      z-index: 5;
     }
 
     .css-logo {
@@ -88,7 +118,7 @@ $dc-width: 590;
 
     .css-slide_content {
       // position: relative;
-      background-color: #fff;
+      background-color: var(--common-color1);
       position: absolute;
       width: calc(355 *(#{100vw}/ #{$d-width}));
       height: calc(100dvh - 2.6666666667dvh);
@@ -155,7 +185,7 @@ $dc-width: 590;
       .css-credit {
         position: absolute;
         // width: calc(278 *(#{100vw}/ #{$d-width}));
-        top: calc(476 *(#{100vw}/ #{$d-width}));
+        top: calc(500 *(#{100vw}/ #{$d-width}));
         left: 0;
         transform-origin: left top;
         opacity: 0;
@@ -186,7 +216,7 @@ $dc-width: 590;
         bottom: 0;
         left: 0;
         transform-origin: left bottom;
-
+        color: var(--color2);
 
         &--count,
         &--max {
@@ -208,8 +238,10 @@ $dc-width: 590;
     }
 
     .css-footer {
+      position: relative;
       scroll-snap-align: start;
-      // height: settings.get_rem(490);
+      background-color: var(--common-color1);
+      z-index: 3;
       padding-top: calc(68 *(#{100vw}/ #{$d-width}));
       padding-bottom: calc(159 *(#{100vw}/ #{$d-width}));
     }
@@ -223,20 +255,17 @@ $dc-width: 590;
 
     .css-staff_text {
 
-      margin: 0 auto;
+
       margin-top: calc(40 *(#{100vw}/ #{$d-width}));
 
-      .css-text {
+      a {
+        display: block;
+        margin: 0 auto;
+        width: calc(300 *(#{100vw}/ #{$d-width}));
+        padding: calc(10 *(#{100vw}/ #{$d-width}));
+        background-color: var(--common-color3);
         text-align: center;
-        @include settings.family-TimesNewRoman;
-        font-size: calc(12 *(#{100vw}/ #{$d-width}));
-        font-style: italic;
-        line-height: calc(15 *(#{100vw}/ #{$d-width}));
-        letter-spacing: calc(0/1000) + em;
-      }
-
-      .css-text+.css-text {
-        margin-top: calc(-1 *(#{100vw}/ #{$d-width}));
+        font-size: calc(16 *(#{100vw}/ #{$d-width}));
       }
 
     }

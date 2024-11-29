@@ -7,7 +7,7 @@ $dc-width: 800;
 
 
 @mixin mainAnimation {
-  .landing_content {
+  .landing_content_scroll {
     @keyframes fadeIn {
       0% {
         opacity: 0;

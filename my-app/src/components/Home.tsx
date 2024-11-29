@@ -66,7 +66,8 @@ export const Home: React.FC = () => {
               <dt>得意言語：バックエンド</dt>
               <dd>
                 php(wordpress,MVCモデル設計のフレームワーク),
-                ruby(liquid:shopify),
+                ※wordpressはレンタルサーバの選定、Advanced Custom Fields（ACF）を考慮した実装も対応可能です。
+                <br />ruby(liquid:shopify),
                 MySQL(select update delete insert createの基本操作)
               </dd>
             </dl>
@@ -93,6 +94,24 @@ export const Home: React.FC = () => {
                 ※直近は基本情報技術者を受験予定です。2024年12月中旬に試験
               </dd>
             </dl>
+            <dl>
+              <dt>自己PR</dt>
+              <dd>
+                よく仕事に対する姿勢が熱いと言われます。
+                <br />熱すぎるとも思われているので、真面目すぎるからもう少し肩の力を抜いて仕事したら良いですよとも言われます。
+                <br />
+                <br />協力して仕事をしたい
+                <br />制作物を作るときは、関わるメンバーで協力して作りたいので、お互いが正しく意見が言える関係で居ることを意識します。※自分の意見だけを通さない
+                <br />相手の意図をくみ取る意識をする。メンバーが出した良い提案を奪うような言い方ではなく、提案者をたてる話し方をする。
+                <br />
+                <br />100点の成果がだせない
+                <br />必ず自分は小さなミスをしてしまい95~99%ぐらいの評価をいただくことが多いです
+                <br />技術関連が評価されるぶん、細かいミスをする部分が悪目立ちして惜しい評価をされます
+                <br />チェックなどツールの力で減らせるものは減らして制度を上げる努力をしていますが、
+                <br />それでもmarginが1px違いますなど、致命的では無いですがミスがどこかにあります。
+              </dd>
+            </dl>
+
           </div>
 
         </div>
@@ -110,8 +129,9 @@ export const Home: React.FC = () => {
               </Link>
             </li>
             <li className="css-link_list_item">
-              <Link className="css-link" to="page2">
-                せり上がりページ
+              <Link className="css-link" to="page2" preventScrollReset={true}>
+                せり上がりページ<br />
+                (職歴)
               </Link>
             </li>
           </ul>
@@ -122,7 +142,7 @@ export const Home: React.FC = () => {
           <h2>実務での実装</h2>
 
           <ul className="css-work_list">
-            <li className="css-work_list_item">
+            <li className="css-work_list_item js-fadeIn">
               <a className="css-work_list_item_thumbnail" href="https://furfurfur.jp/Page/issue/issue_240919/" target="_blank" rel="noopener">
                 <img src={`${process.env.PUBLIC_URL}/images/home/work1.png`} alt="" />
               </a>
@@ -162,7 +182,7 @@ export const Home: React.FC = () => {
               </div>
 
             </li>
-            <li className="css-work_list_item">
+            <li className="css-work_list_item js-fadeIn">
               <a className="css-work_list_item_thumbnail" href="https://alphonsemucha.jp/Page/LP/2024/1016_moon/" target="_blank" rel="noopener">
                 <img src={`${process.env.PUBLIC_URL}/images/home/work2.png`} alt="" />
               </a>
@@ -202,7 +222,7 @@ export const Home: React.FC = () => {
               </div>
 
             </li>
-            <li className="css-work_list_item">
+            <li className="css-work_list_item js-fadeIn">
               <a className="css-work_list_item_thumbnail" href="https://emmi.jp/Page/collection/2024/aw_1st/" target="_blank" rel="noopener">
                 <img src={`${process.env.PUBLIC_URL}/images/home/work3.png`} alt="" />
               </a>
@@ -253,7 +273,7 @@ export const Home: React.FC = () => {
 
             </li>
 
-            <li className="css-work_list_item">
+            <li className="css-work_list_item js-fadeIn">
               <a className="css-work_list_item_thumbnail" href="https://www.nanasgreentea.com/" target="_blank" rel="noopener">
                 <img src={`${process.env.PUBLIC_URL}/images/home/work4.png`} alt="" />
               </a>
@@ -292,7 +312,7 @@ export const Home: React.FC = () => {
 
             </li>
 
-            <li className="css-work_list_item">
+            <li className="css-work_list_item js-fadeIn">
               <a className="css-work_list_item_thumbnail" href="https://www.kanetetsu.com/" target="_blank" rel="noopener">
                 <img src={`${process.env.PUBLIC_URL}/images/home/work5.png`} alt="" />
               </a>

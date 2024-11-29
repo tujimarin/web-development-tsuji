@@ -29,7 +29,7 @@ body h3,
 body h4,
 body h5,
 body dt {
-  color: var(--common-color3);
+  color: var(--common-color2);
   word-break: break-all;
 }
 body h1,
@@ -37,18 +37,9 @@ body h2,
 body h3,
 body h4,
 body h5 {
-  background-color: var(--common-color4);
-  padding: 1%;
+  background-color: var(--common-color3);
   -webkit-filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.6));
   filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.6));
-}
-body h1 {
-  font-size: 2.6rem;
-  font-weight: bold;
-}
-body h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
 }
 body a {
   opacity: 1;
@@ -103,11 +94,6 @@ ol[role=list] {
   list-style: none;
 }
 
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
 h1,
 h2,
 h3,
@@ -153,4 +139,39 @@ textarea:not([rows]) {
 
 :target {
   scroll-margin-block: 5ex;
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: 1%;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: calc(10 * 100vw / 750);
+  }
+  h1 {
+    font-size: calc(36 * 100vw / 750);
+    font-weight: bold;
+  }
+  h2 {
+    font-size: calc(32 * 100vw / 750);
+    font-weight: bold;
+  }
 }

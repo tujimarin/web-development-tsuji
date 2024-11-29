@@ -1,35 +1,40 @@
-# 過去実装したものまとめ
 
-[index page : https://tujimarin.github.io/web-development-tsuji/](https://tujimarin.github.io/web-development-tsuji/)
+# Portfolio
 
-## スクロール発火条件のプラグイン無しで実装
+自身の技術ナレッジを貯めることを目的として作成
+制作の雛形として、自身が更新しやすい用にアップデートを繰り返して行く
 
-<https://tujimarin.github.io/web-development-tsuji/scroll/index.html>
+<https://tujimarin.github.io/web-development-tsuji/>
 
-## swiperとstickyを利用したページ
+## TOPページのコード
 
-<https://tujimarin.github.io/web-development-tsuji/swiper_sticky/index.html>
+<https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/src/components/Home.tsx>
 
-# その他
+## スクロールトリガーページのコード
 
-要望事に利用する拡張機能など
+スクロール量でアニメーションが発火するような仕組みを実装
+pcでは横、SPでは縦で、更新の手間を軽減するためhtmlのコードを分けずにコーディング
 
-## PerfectPixel by WellDoneCode
+<https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/src/components/Page1.tsx>
 
-外注のデザイナーさんのこだわりが強い場合に利用
-1px単位で調整する
+## せり上がりページのコード
 
-<https://chromewebstore.google.com/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ja>
+通常のLPでよくあるせり上がりの表現の雛形として実装
 
-## jQuery
+<https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/src/components/Page2.tsx>
 
-ライブラリ(slickなど)も含めて要望または、プロジェクト内で通常利用を要求された場合には、主軸として使う。
-基本的にはなるべく使わないように実装を心がけている。
+# git
 
+<https://github.com/tujimarin/web-development-tsuji>
 
-https://react-slick.neostack.com/
+# 開発環境
 
-npm install react-router-dom
+vscode
+nodejs
+react&Typescript
+scss
+gulp
 
-{console.table({ a: ["A1", "A2"], b: ["B1", "B2"] })}
-      {console.log("hoge")}
+## バージョンの詳細
+
+<https://github.com/tujimarin/web-development-tsuji/blob/main/my-app/package.json>

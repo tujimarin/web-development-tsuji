@@ -1,21 +1,25 @@
 import React, { useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { getClassElement } from './functions';
+import { getClassElement, classFindActive } from './functions';
 
 import '../styles/scrollStyle.css';
 
+const handleResize = () => {
+  if (window.innerWidth > 768) {
+    window.location.reload();
+  }
+};
+
 export const Page1: React.FC = () => {
   const componentName = "Sample Page 1";
-  useEffect(() => {
-    // DOM が準備完了後に実行される処理
-    console.log("DOM is ready Sample Page 1");
 
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
     const container = getClassElement(document, 'container');
     const targetElement = document.querySelector(".css-slide_content") as HTMLElement;
     let currentScrollTopMax = 0;
     let isElementInView = false; // 要素が画面内に入っているかのフラグ
-    const horizontalContainerElement = document.querySelector(".horizontal-container");
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -29,8 +33,27 @@ export const Page1: React.FC = () => {
     }, {
       threshold: 1.0 // 100% 要素が画面に収まったとき
     });
-    console.log('aaaaa', targetElement);
     observer.observe(targetElement);
+
+    const landingContentEl = document.getElementById('landing_content_scroll');
+    const target2 = landingContentEl?.querySelectorAll('.js-fadeIn');
+    const observer2 = new IntersectionObserver((entries) => {
+      for (const value of entries) {
+        const element = value.target;
+        if (value.isIntersecting === true) {
+          classFindActive(element as HTMLElement, 'js-fadeIn');
+        }
+      }
+    }, {
+      rootMargin: '-10% 0px',
+      threshold: [0]
+    });
+
+    target2?.forEach((tgt) => {
+      observer2.observe(tgt);
+    });
+
+
 
     const windowHeight = document.documentElement.clientHeight;
     const article = document.querySelector(".css-slide_content");
@@ -265,13 +288,30 @@ export const Page1: React.FC = () => {
         lastScrollTop = currentScrollTop; // 最後のスクロール位置を更新
       }
     });
+
+    const scrollTextEl = document.getElementById('scrollText') as HTMLElement;
+    container!.addEventListener("scroll", () => {
+      const scrollY = container!.scrollTop || document.documentElement.scrollTop; // ページのスクロール量
+      const threshold = 0; // スクロール量の閾値
+
+      // 閾値を超えた場合はフェードアウト
+      // console.log(scrollY > threshold, scrollY, threshold)
+      if (scrollY > threshold) {
+        scrollTextEl.style.opacity = "0";
+        scrollTextEl.style.display = "none";
+      } else {
+        scrollTextEl.style.opacity = "1";
+        scrollTextEl.style.display = "flex";
+      }
+    });
   }, []); // 空の依存配列にすることでマウント時のみ実行
   return (
     <>
+
       <Helmet>
         <title>{componentName}</title>
       </Helmet>
-      <div className="landing_content_scroll articleContainer container">
+      <div className="landing_content_scroll articleContainer container" id="landing_content_scroll">
 
         <section className="css-firstview">
           <picture>
@@ -279,8 +319,10 @@ export const Page1: React.FC = () => {
             <img src={`${process.env.PUBLIC_URL}/images/scroll/mainvisual_l.jpg`} alt="" width="" height="" />
           </picture>
 
-          <p className="css-text">
-            下にスクロールしてね
+          <p className="css-text js-fadeIn" id="scrollText">
+            scroll
+            <div className="css-arrow-down">
+            </div>
           </p>
         </section>
 
@@ -910,16 +952,9 @@ export const Page1: React.FC = () => {
         </div>
 
         <section className="css-footer" id="target-footer">
-
           <div className="css-footer__wrapper">
-
             <div className="css-staff_text">
-              <p className="css-text">
-                こちらの写真たちは、猫カフェに行った時に、
-                取った写真たちです！
-              </p>
-
-              <NavLink to="/web-development-tsuji" className="active">
+              <NavLink to="/web-development-tsuji">
                 TOPへ戻る
               </NavLink>
             </div>

@@ -3,4 +3,23 @@
 
 $d-width: 750;
 
-@mixin landing-page {}
+@mixin landing-page {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding: calc(10 *(#{100vw}/ #{$d-width}));
+  }
+
+  h1 {
+    font-size: calc(36 *(#{100vw}/ #{$d-width}));
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: calc(32 *(#{100vw}/ #{$d-width}));
+    font-weight: bold;
+  }
+}
