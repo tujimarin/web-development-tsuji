@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/web-development-tsuji/static/css/main.76440be8.css",
-    "main.js": "/web-development-tsuji/static/js/main.69343cca.js",
+    "main.js": "/web-development-tsuji/static/js/main.e2c28c67.js",
     "index.html": "/web-development-tsuji/index.html",
     "main.76440be8.css.map": "/web-development-tsuji/static/css/main.76440be8.css.map",
-    "main.69343cca.js.map": "/web-development-tsuji/static/js/main.69343cca.js.map"
+    "main.e2c28c67.js.map": "/web-development-tsuji/static/js/main.e2c28c67.js.map"
   },
   "entrypoints": [
     "static/css/main.76440be8.css",
-    "static/js/main.69343cca.js"
+    "static/js/main.e2c28c67.js"
   ]
 }
